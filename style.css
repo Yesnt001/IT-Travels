@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+}
+body{
+    background: linear-gradient(to top, transparent, rgba(239,46,28,.5)), url(imagenes/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    max-width: 1000px;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 30px;
+    padding: 50px;
+    color: #fff;
+}
+.contenedor header{
+    margin-top: -50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedor header h1{
+    float: left;
+    margin-top: 10px;
+}
+.contenedor header nav{
+    float: left;
+}
+.contenedor header nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.contenedor header nav ul li{
+    padding: 10px 15px;
+    margin-top: 5px;
+}
+.contenedor header nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 10px;
+    font-size: 14px;
+    padding: 15px 25px;
+    transition: .5s;
+    border-radius: 20px;
+    display: inline-block;
+}
+.contenedor header nav ul li a:hover{
+    background-color: #000;
+    color: #fff;
+}
+.contenedor header .busqueda{
+    float: right;
+}
+.contenedor header .busqueda input{
+    display: inline-block;
+    width: 200px;
+    border: none;
+    background-color: rgba(0,0,0,.4);
+    padding: 7px;
+    outline: 2px solid transparent;
+    color: #fff;
+    border-right: 3px;
+    transition: .5s;
+    opacity: 1;
+}
+.contenedor header .busqueda input:focus {
+    outline: 2px solid #fff; /* Mantén el borde visible cuando se selecciona el input */
+}
+.contenedor header .busqueda:hover input{
+    outline: 2px solid #fff;
+    opacity: 1;
+}
+.contenedor header .busqueda i{
+    cursor: pointer;
+}
+.contenedor .contenido{
+    display: flex;
+    position: relative;
+}
+/*Linea*/
+.contenido .linea-decorativa{
+    position: absolute;
+    height: 250px;
+    border-left: 2px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    top: 50%;
+    gap: 100px;
+    transform: translateY(-50%);
+}
+/*Circulos en linea decorativa*/
+.contenido .linea-decorativa .circulo{
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: -9px;
+}
+
+/*Titulo*/
+.contenedor .contenido .left{
+    width: -50%;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+/*Machu Pichu*/
+.contenedor .contenido .left h2{
+    padding-top: -10px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+/*Descripción*/
+.contenedor .contenido .left p{
+    margin-bottom: 0px;
+    font-size: 14px;
+    margin-top: 60px;
+}
+/*Boton Explorar*/
+.contenedor .contenido .left button{
+    display: inline-block;
+    margin-top: 40px;
+    border: none;
+    background-color: transparent;
+    border:2px solid #fff;
+    color:#fff;
+    padding: 5px 20px;
+    border-radius: 30px;
+    transition: .5s;
+    cursor: pointer;
+}
+#explorar-description {
+    font-size: 14px; 
+    color: #fff; 
+    margin-top: 5px; 
+    margin-bottom: 10px; 
+    text-align: left; 
+    opacity: 0.8; 
+}
+.contenedor .contenido .left button:hover{
+    background-color: #000;
+    color: #fff
+}
+.contenedor .contenido .left .redes{
+    font-size: 12px;
+    width: fit-content;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #fff;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+.contenedor .contenido .left .redes a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.contenedor .contenido .right{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    text-align: right;
+}
+.contenedor .contenido .right .popular{
+    border-bottom: 2px solid #fff;
+    width: 100px;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+/*Añadir descripcion en imagenes (.foto descripcion)*/
+.contenedor .contenido .right .contenedor-fotos{
+    display: flex;
+    text-align: center;
+}
+
+.contenedor .contenido .right .contenedor-fotos img{
+    width: 100px;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+/* Hacer bloom en los botones -- Discapacidades motoras*/
+button, a {
+    padding: 10px 15px; /* Aumentar tamaño clicable */
+    outline: none; /* Eliminar bordes predeterminados */
+}
+
+button:focus, a:focus {
+    outline: 2px dashed #fff;
+    outline-offset: 4px;
+}
+
+/* Barra de contraste en la esquina inferior */
+.contrast-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    gap: 10px;
+    right: 100px;
+    z-index: 1000;
+    margin-top: 20px;
+    margin-left: auto;
+}
+/*Tamaño del boton*/
+.contrast-bar button {
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size: 14px;
+    transition: .3s;
+}
+.contrast-bar button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Tema de contraste */
+.contrast-bar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.contrast-bar button {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size: 10px;
+    transition: background-color 0.3s ease;
+}
+.contrast-bar button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Tema de contraste */
+.high-contrast {
+    background-color: #000;
+    color: #FFD700;
+}
+.high-contrast .contenido {
+    background-color: rgba(0, 0, 0, 1);
+}
+.high-contrast .contenido .left button, .high-contrast .contenido .left a {
+    border: 2px solid #fff;
+    color: #fff;
+}
+/*Color texto Contraste*/
+.high-contrast .contenedor {
+    background-color: #000 !important;
+    color: #FFD700 !important;
+}
+
+/* Título - Contraste*/
+.high-contrast h1 {
+    color: #c84c12 !important;
+}
+
+/*Enlaces del menú - Contraste*/
+.high-contrast nav ul li a {
+    color: #bfbe62 !important;
+}
+
+.high-contrast nav ul li a:hover {
+    color: #FF4500 !important;
+}
+.high-contrast .foto p {
+    color: #fff !important;
+}
+.high-contrast nav ul li a:focus {
+    outline: 2px dashed #FFD700;
+}
+.increase-text-size {
+    font-size: 1.2em; /* Incrementa el tamaño del texto */
+    transition: none; /* Quita la animación de cambio de tamaño */
+}
+.increase-text-size {
+    font-size: 1.2em; /* Incrementa el tamaño de todo el texto */
+    transition: none; /* Quita la animación de cambio de tamaño */
+}
+
+.increase-text-size * {
+    font-size: 20px; /* Aumenta el tamaño de todo el texto en la página */
+}
+
+/*Quitar barra lateral de botones*/
+body.high-contrast {
+    overflow: hidden;
+}
+body.increase-text-size{
+    overflow: hidden;
+}

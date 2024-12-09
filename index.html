@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>IT-Travels</title>
+</head>
+<body>
+    <section class="contenedor">
+      <header>
+          <h1>IT-Travels</h1>
+          <nav>
+              <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contactos</a></li>
+                <li><a href="#">Explorar</a></li>
+              </ul>
+          </nav>
+          <div class="busqueda">
+              <input type="text" placeholder="Buscar">
+              <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+      </header>
+  
+      <div class="contenido">
+          <div class="linea-decorativa">
+              <div class="circulo"></div>
+              <div class="circulo"></div>
+              <div class="circulo"></div>
+          </div>
+          <div class="left">
+            <h2>MACHU PICHU</h2>
+            <p>Ubicada en lo alto de los Andes peruanos, Machu Picchu es una antigua ciudad inca y una de las siete maravillas del mundo moderno. Esta icónica ciudadela, construida en el siglo XV, combina arquitectura impresionante con paisajes naturales espectaculares. Sus terrazas agrícolas, templos y plazas ofrecen una experiencia única que conecta historia, cultura y naturaleza.</p>
+
+            <button aria-describedby="explorar-description">Explorar</button>
+            <p id="explorar-description">Haz clic para conocer más detalles sobre Machu Picchu.</p>
+            
+            <div class="redes">
+                <a href="#" tabindex="-1"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" tabindex="-1"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" tabindex="-1"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="popular">
+                Popular
+            </div>
+            <!---->
+            <div class="contenedor-fotos">
+              <div class="foto">
+                  <img src="imagenes/f1.jpg" alt="Llamas pastan plácidamente frente a ruinas incas.">
+                  <p>Llamas pastan plácidamente frente a ruinas incas.
+                  </p>
+              </div>
+              <div class="foto">
+                  <img src="imagenes/f2.jpg" alt="Lindo lugar con vegetación">
+                  <p>Lindo lugar con vegetación</p>
+              </div>
+              <div class="foto">
+                  <img src="imagenes/f3.jpg" alt="Camino empedrado rodeado de vegetación">
+                  <p>Camino empedrado rodeado de vegetación</p>
+              </div>
+          </div>
+          </div>
+      </div>
+
+      <div class="contrast-bar">
+          <button onclick="toggleContrast()">Contraste</button>
+          <button onclick="toggleTextSize()">Ajustar tamaño de texto</button>
+      </div>
+
+      <script>
+          function toggleContrast() {
+              document.body.classList.toggle('high-contrast');
+          }
+
+          function toggleTextSize() {
+              document.body.classList.toggle('increase-text-size');
+          }
+
+          document.addEventListener('DOMContentLoaded', function() {
+              var searchInput = document.querySelector('.busqueda input');
+
+              searchInput.addEventListener('focus', function() {
+                  this.style.outline = '2px solid #fff'; /* Cambia el borde al enfocarse */
+              });
+
+              searchInput.addEventListener('blur', function() {
+                  this.style.outline = '2px solid transparent'; /* Cambia el borde cuando pierda el enfoque */
+              });
+          });
+      </script>
+
+</body>
+</html>
